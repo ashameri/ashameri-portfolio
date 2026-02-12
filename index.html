@@ -5,64 +5,112 @@
   <title>Ash Ameri – Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f0f0f;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 20% 20%, #1f1f1f, #0a0a0a 60%);
       color: #ffffff;
+      overflow-x: hidden;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 80px 24px;
     }
 
     h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+      font-size: 56px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -1px;
     }
 
     p.subtitle {
-      color: #bbbbbb;
-      margin-bottom: 40px;
-      font-size: 18px;
+      color: #9e9e9e;
+      margin-bottom: 60px;
+      font-size: 20px;
+      font-weight: 300;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
     }
 
     .card {
-      background: #1a1a1a;
-      border-radius: 12px;
-      padding: 20px;
+      position: relative;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      padding: 28px;
       text-decoration: none;
       color: white;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: all 0.35s ease;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .card:hover::before {
+      opacity: 1;
     }
 
     .card img {
       width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.04);
     }
 
     .card h3 {
-      margin: 0 0 8px;
+      margin: 0 0 10px;
+      font-size: 22px;
+      font-weight: 600;
     }
 
     .card p {
-      color: #aaaaaa;
-      font-size: 14px;
+      color: #b5b5b5;
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 38px;
+      }
+
+      p.subtitle {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -74,35 +122,22 @@
 
     <div class="grid">
       <a class="card" href="https://ashameri.github.io/dhubab-demo/" target="_blank">
-        <img src="https://via.placeholder.com/600x400" alt="Digital Marketing Website">
+        <img src="https://via.placeholder.com/800x500" alt="Digital Marketing Website">
         <h3>Dhubab – Digital Marketing</h3>
-        <p>Meta-focused digital marketing agency website.</p>
+        <p>Meta-focused digital marketing agency website built for performance-driven brands.</p>
       </a>
 
       <a class="card" href="https://ashameri.github.io/ashameri-website/" target="_blank">
-        <img src="https://via.placeholder.com/600x400" alt="Ash Ameri Website">
+        <img src="https://via.placeholder.com/800x500" alt="Ash Ameri Website">
         <h3>Ash Ameri – Personal Project</h3>
-        <p>Personal brand and web design showcase project.</p>
+        <p>Personal brand and premium web design showcase focused on clarity and positioning.</p>
       </a>
 
       <a class="card" href="#" target="_blank">
-        <img src="https://via.placeholder.com/600x400" alt="Project demo">
+        <img src="https://via.placeholder.com/800x500" alt="Med Spa Website">
         <h3>Med Spa Website</h3>
-        <p>Luxury landing page focused on bookings and trust.</p>
+        <p>Luxury landing experience designed for bookings, trust, and conversion optimisation.</p>
       </a>
 
       <a class="card" href="#" target="_blank">
-        <img src="https://via.placeholder.com/600x400" alt="Project demo">
-        <h3>Law Firm Website</h3>
-        <p>Authority-driven site designed for lead generation.</p>
-      </a>
-
-      <a class="card" href="#" target="_blank">
-        <img src="https://via.placeholder.com/600x400" alt="Project demo">
-        <h3>SaaS Product Page</h3>
-        <p>Clean product storytelling with conversion focus.</p>
-      </a>
-    </div>
-  </div>
-</body>
-</html>
+        <img src="https://via.placeholder.com/800x50
