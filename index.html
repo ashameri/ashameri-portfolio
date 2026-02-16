@@ -1,104 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ash Ameri | Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ash Ameri – Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family:'Inter',sans-serif;
-  background:#050505;
-  color:white;
-  overflow-x:hidden;
+body {
+  font-family: 'Inter', sans-serif;
+  background: #050505;
+  color: white;
+  overflow-x: hidden;
 }
 
 /* HERO */
-.hero{
-  padding:140px 10% 80px;
+.hero {
+  padding: 140px 10% 80px;
 }
 
-.hero h1{
-  font-size:clamp(60px,7vw,100px);
-  font-weight:800;
-  line-height:1.05;
-  letter-spacing:-2px;
-  background:linear-gradient(90deg,#ffffff,#f5c16c);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+.hero h1 {
+  font-size: clamp(60px, 7vw, 100px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  background: linear-gradient(90deg, #ffffff, #f5c16c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.hero p{
-  margin-top:25px;
-  font-size:20px;
-  color:#bbb;
-  max-width:650px;
+.hero p {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #bbb;
 }
 
-/* GRID */
-.projects{
-  padding:40px 10% 120px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-  gap:40px;
+/* PROJECT GRID */
+.projects {
+  padding: 40px 10% 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* CARD */
-.card{
-  position:relative;
-  border-radius:24px;
-  overflow:hidden;
-  text-decoration:none;
-  color:white;
-  transition:all .4s ease;
-  background:#111;
-  box-shadow:0 25px 60px rgba(0,0,0,.7);
+.card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  background: #111;
+  transition: all 0.4s ease;
 }
 
-.card img{
-  width:100%;
-  display:block;
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.card-content{
-  position:absolute;
-  bottom:0;
-  width:100%;
-  padding:30px;
-  background:linear-gradient(to top,rgba(0,0,0,.95),rgba(0,0,0,0));
+.card-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0));
 }
 
-.card-content h3{
-  font-size:24px;
-  margin-bottom:10px;
-  font-weight:600;
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
-.card-content p{
-  font-size:15px;
-  color:#ccc;
-  margin-bottom:15px;
+.card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
 }
 
-.card-content span{
-  font-size:13px;
-  font-weight:600;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  color:#00e0ff;
+.card span {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f5c16c;
 }
 
-.card:hover{
-  transform:translateY(-12px);
-  box-shadow:0 35px 90px rgba(0,0,0,.9);
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.9);
 }
 </style>
 </head>
@@ -112,15 +123,15 @@ body{
 
 <section class="projects">
 
-  <!-- AURUM SPA -->
-<a class="card" href="https://ashameri.github.io/aurum-spa/" target="_blank">
-  <img src="ASH AMERI CREATIVES - AURUM MED SPA WEB DESIGN.png" alt="Aurum Med Spa">
-  <div class="card-content">
-    <h3>Aurum Med Spa – Luxury Dubai Concept</h3>
-    <p>Ultra-premium spa experience designed for sophistication, elegance and high-end positioning.</p>
-    <span>View Live Site →</span>
-  </div>
-</a>
+  <!-- AURUM -->
+  <a class="card" href="https://ashameri.github.io/aurum-spa/" target="_blank">
+    <img src="ASH AMERI CREATIVES - AURUM MED SPA WEB DESIGN.png" alt="Aurum Med Spa">
+    <div class="card-content">
+      <h3>Aurum Med Spa – Luxury Dubai Concept</h3>
+      <p>Ultra-premium spa experience designed for sophistication, elegance and high-end positioning.</p>
+      <span>View Live Site →</span>
+    </div>
+  </a>
 
   <!-- REVIVE -->
   <a class="card" href="https://ashameri.github.io/revive-medspa/" target="_blank">
@@ -134,7 +145,7 @@ body{
 
   <!-- DHUBAB -->
   <a class="card" href="https://ashameri.github.io/dhubab-demo/" target="_blank">
-    <img src="ASH AMERI CREATIVES - DHUBAB DIGITAL META MARKETING WEB SITE.png" alt="Dhubab">
+    <img src="ASH AMERI CREATIVES - DHUBAB DIGITAL META MARKETING WEB SITE.png" alt="Dhubab Digital">
     <div class="card-content">
       <h3>Dhubab Digital</h3>
       <p>Modern Meta marketing website built for clarity and conversion.</p>
@@ -144,10 +155,10 @@ body{
 
   <!-- PERSONAL PROJECT -->
   <a class="card" href="https://ashameri.github.io/ashameri-website/" target="_blank">
-    <img src="ASH AMERI CREATIVES - WEB DESIGN - CINEMATICS.png" alt="Ash Ameri Personal Project">
+    <img src="ASH AMERI CREATIVES - WEB DESIGN - CINEMATICS.png" alt="Ash Ameri Personal Website">
     <div class="card-content">
       <h3>Ash Ameri – Personal Project</h3>
-      <p>Personal brand website exploring premium positioning, visual storytelling and web authority.</p>
+      <p>Personal brand website exploring premium positioning, visual storytelling and authority.</p>
       <span>View Live Site →</span>
     </div>
   </a>
